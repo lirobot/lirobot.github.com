@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Lirobot Blog]]></title>
-  <link href="www.lirobot.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: 测试 | Lirobot Blog]]></title>
+  <link href="www.lirobot.com/blog/categories/测试/atom.xml" rel="self"/>
   <link href="www.lirobot.com/"/>
   <updated>2012-12-22T00:23:24+08:00</updated>
   <id>www.lirobot.com/</id>
