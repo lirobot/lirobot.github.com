@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>www.lirobot.com/blog/2012/12/22/test/</loc>
+        <loc>lirobot.com/blog/2012/12/22/test/</loc>
         <lastmod>2012-12-22T02:15:00+08:00</lastmod>
     </url>
     <url>
-        <loc>www.lirobot.com/blog/archives/</loc>
+        <loc>lirobot.com/blog/archives/</loc>
         <lastmod>2012-12-22T00:20:50+08:00</lastmod>
     </url>
     <url>
-        <loc>www.lirobot.com/</loc>
+        <loc>lirobot.com/</loc>
         <lastmod>2012-12-22T00:20:50+08:00</lastmod>
     </url>
 </urlset>
