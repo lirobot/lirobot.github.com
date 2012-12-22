@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Lirobot Blog</title>
+  <title>安装Octopress - Lirobot Blog</title>
   <meta name="author" content="Lirobot">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="lirobot.com/">
+  <link rel="canonical" href="lirobot.com/blog/2012/12/22/install-octopress/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -62,15 +62,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/12/22/install-octopress/">安装Octopress</a></h1>
+      <h1 class="entry-title">安装Octopress</h1>
     
     
       <p class="meta">
@@ -93,7 +90,7 @@
   </header>
 
 
-  <div class="entry-content"><p>Octopress可用于建立自己的私人博客。下面介绍如何安装Octopress</p>
+<div class="entry-content"><p>Octopress可用于建立自己的私人博客。下面介绍如何安装Octopress</p>
 
 <h2>安装git</h2>
 
@@ -106,23 +103,137 @@
 </ul>
 
 
+<!--more-->
+
+
+<h2>安装Ruby环境</h2>
+
+<h3>安装Ruby</h3>
+
+<ul>
+<li><p>ubuntu下在中端执行命令进行安装</p>
+
+<pre><code>sudo apt-get install curl
+curl -L https://get.rvm.io | bash -s stable --ruby
+rvm install 1.9.3
+rvm use 1.9.3
+rvm rubygems latest
+</code></pre>
+
+<p>安装完毕很可以通过<code>ruby --version</code>查看安装是否成功。在ubuntu下Ruby的安装就完成了。可以跳到<strong>安装Octopress</strong>。</p>
+
+<p><em>还是ubuntu方便，windows下就比较麻烦了。</em></p></li>
+<li><p>windows环境下可以到<a href="http://rubyinstaller.org/downloads">rubyinstaller</a>下载Ruby安装包和DevKit</p>
+
+<p>如果<a href="http://rubyinstaller.org/downloads">rubyinstaller</a>登录不上去可以选择到<a href="http://rubyforge.org/frs/?group_id=167">RubyForge</a>下载Ruby的安装包，推荐下载1.9.3。安装Ruby时请选择</p>
+
+<blockquote><p>Add Ruby executables to your PATH</p></blockquote>
+
+添加Ruby到环境变量中
+
+<h3>安装DevKit</h3>
+
+<p>Devkit的安装包可以在<a href="https://github.com/oneclick/rubyinstaller/downloads/">Devkit</a>下载。下载后解压，解压路径中不能有中文。在Git bash中切换进入解压目录输入下面命令</p>
+
+<p>  ruby dk.rb init
+  ruby dk.rb install
+  gem install rdiscount &#8211;platform=ruby</p></li>
+</ul>
+
+
+<h2>安装Octopress</h2>
+
+<p>通过git从Github克隆Octopress</p>
+
+<pre><code>git clone git://github.com/imathis/octopress.git octopress
+</code></pre>
+
+<p>安装相应依赖工具（需要切换到本地的Octopresas git目录中执行）</p>
+
+<pre><code>gem install bundler
+bundle install  
+</code></pre>
+
+<p>如果出现下面错误，说明没有<strong>安装DevKit</strong>，请安装以后在执行相关命令。</p>
+
+<blockquote><p>Please update your PATH to include build tools or download the DevKit<br/>
+from &#8216;http://rubyinstaller.org/downloads&#8217; and follow the instructions<br/>
+at &#8216;http://github.com/oneclick/rubyinstaller/wiki/Development-Kit&#8217;<br/>
+An error occurred while installing posix-spawn (0.3.6), and Bundler cannot contnue.<br/>
+Make sure that <code>gem install posix-spawn -v '0.3.6'</code> succeeds before bundling.</p></blockquote>
+
+<p>安装Octopress主题</p>
+
+<pre><code>rake install
+</code></pre>
+
+<p>到这里Octopress就安装完毕了。</p>
 </div>
+
+
+  <footer>
+    <p class="meta">
+      
   
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/12/22/install-octopress/">Read on &rarr;</a>
-    </footer>
+
+<span class="byline author vcard">Posted by <span class="fn">Lirobot</span></span>
+
+      
+
+
+
+
+
+
+
+
   
 
 
-    </article>
+<time datetime="2012-12-22T16:35:00+08:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2012</time>
+      
+
+<span class="categories">
   
-  <div class="pagination">
+    <a class='category' href='/blog/categories/octopress/'>Octopress</a>
+  
+</span>
+
+
+    </p>
     
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+      ﻿<div class="sharing">
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_b" style="line-height: 12px;">
+<img src="http://bdimg.share.baidu.com/static/images/type-button-1.jpg?cdnversion=20120831" />
+<a class="shareCount"></a>
 </div>
+<script type="text/javascript" id="bdshare_js" data="type=button&amp;uid=835397" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+</script>
+<!-- Baidu Button END -->
+</div>
+
+    
+    <p class="meta">
+      
+      
+    </p>
+  </footer>
+</article>
+
+
+
+  <section>
+    <div>﻿<script type='text/javascript' charset='utf-8' src='http://open.denglu.cc/connect/commentcode?appid=62147dentDaPJ4jFgwIwSjCU3u7NxA'></script></div>
+  </section>
+
+
+
+</div>
+
 <aside class="sidebar">
   
     ﻿<section>
@@ -147,6 +258,7 @@
 
   
 </aside>
+
 
     </div>
   </div>
