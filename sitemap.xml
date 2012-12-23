@@ -1,19 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>lirobot.com/blog/2012/12/22/first/</loc>
+        <loc>http://lirobot.com//blog/2012/12/22/first/</loc>
         <lastmod>2012-12-22T21:08:01+08:00</lastmod>
     </url>
     <url>
-        <loc>lirobot.com/blog/2012/12/22/install-octopress/</loc>
+        <loc>http://lirobot.com//blog/2012/12/22/install-octopress/</loc>
         <lastmod>2012-12-22T16:47:14+08:00</lastmod>
     </url>
     <url>
-        <loc>lirobot.com/blog/archives/</loc>
+        <loc>http://lirobot.com//blog/archives/</loc>
         <lastmod>2012-12-22T21:08:01+08:00</lastmod>
     </url>
     <url>
-        <loc>lirobot.com/</loc>
+        <loc>http://lirobot.com//</loc>
         <lastmod>2012-12-22T21:08:01+08:00</lastmod>
     </url>
 </urlset>
