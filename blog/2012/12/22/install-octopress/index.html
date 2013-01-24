@@ -18,9 +18,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://lirobot.com//blog/2012/12/22/install-octopress/">
+  <link rel="canonical" href="http://lirobot.github.com/blog/2012/12/22/install-octopress/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+   <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
@@ -28,6 +29,8 @@
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
 
   
   <script type="text/javascript">
@@ -47,31 +50,27 @@
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">Lirobot Blog</a></h1>
-  
-    <h2>自由 尊重 分享 快乐</h2>
-  
 </hgroup>
 
 </header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <!-- <nav role="navigation"><ul class="subscription" data-subscription="rss">
   <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
   
 </ul>
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:lirobot.com/" />
+    <input type="hidden" name="q" value="site:lirobot.github.com" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
   
-﻿<ul class="main-navigation">
+<ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
 </ul>
 
-</nav>
+</nav> -->
   <div id="main">
     <div id="content">
       <div>
@@ -132,7 +131,7 @@ rvm use 1.9.3
 rvm rubygems latest
 </code></pre>
 
-<p>安装完毕很可以通过<code>ruby --version</code>查看安装是否成功。在ubuntu下Ruby的安装就完成了。可以跳到<strong>安装Octopress</strong>。</p>
+<p>安装完毕很可以通过<code>ruby  --version</code>查看安装是否成功。在ubuntu下Ruby的安装就完成了。可以跳到<strong>安装Octopress</strong>。</p>
 
 <p><em>还是ubuntu方便，windows下就比较麻烦了。</em></p></li>
 <li><p>windows环境下可以到<a href="http://rubyinstaller.org/downloads">rubyinstaller</a>下载Ruby安装包和DevKit</p>
@@ -141,17 +140,18 @@ rvm rubygems latest
 
 <blockquote><p>Add Ruby executables to your PATH</p></blockquote>
 
-添加Ruby到环境变量中
+<p>添加Ruby到环境变量中</p></li>
+</ul>
+
 
 <h3>安装DevKit</h3>
 
 <p>Devkit的安装包可以在<a href="https://github.com/oneclick/rubyinstaller/downloads/">Devkit</a>下载。下载后解压，解压路径中不能有中文。在Git bash中切换进入解压目录输入下面命令</p>
 
-<p>  ruby dk.rb init
-  ruby dk.rb install
-  gem install rdiscount &#8211;platform=ruby</p></li>
-</ul>
-
+<pre><code>ruby dk.rb init
+ruby dk.rb install
+gem install rdiscount --platform=ruby
+</code></pre>
 
 <h2>安装Octopress</h2>
 
@@ -214,18 +214,12 @@ Make sure that <code>gem install posix-spawn -v '0.3.6'</code> succeeds before b
 
     </p>
     
-      ﻿<div class="sharing">
-<!-- Baidu Button BEGIN -->
-<div id="bdshare" class="bdshare_b" style="line-height: 12px;">
-<img src="http://bdimg.share.baidu.com/static/images/type-button-1.jpg?cdnversion=20120831" />
-<a class="shareCount"></a>
-</div>
-<script type="text/javascript" id="bdshare_js" data="type=button&amp;uid=835397" ></script>
-<script type="text/javascript" id="bdshell_js"></script>
-<script type="text/javascript">
-document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
-</script>
-<!-- Baidu Button END -->
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://lirobot.github.com/blog/2012/12/22/install-octopress/" data-via="" data-counturl="http://lirobot.github.com/blog/2012/12/22/install-octopress/" >Tweet</a>
+  
+  
+  
 </div>
 
     
@@ -248,8 +242,18 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 
 <aside class="sidebar">
   
-    ﻿<section>
-  <h1>最新博文</h1>
+    <section>
+  <ul id="recent_posts">
+      <li class="post">
+      <a href="http://lirobot.github.com" alt="Home"><img src="/images/Home.png"></a>
+      <a href="http://lirobot.github.com/archives/" alt="Archives"><img src="/images/Calendar.png"></a>
+      <a href="mailto:" alt="E-Mail"><img src="/images/Envelope.png"></a>
+      <a href="http://lirobot.github.com/atom.xml" alt="subscribe feed"><img src="/images/rss.png"></a>
+      </li>
+  </ul>
+</section>
+<section>
+  <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
       <li class="post">
@@ -279,7 +283,7 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Lirobot -
+  Copyright &copy; 2013 - Lirobot -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
@@ -291,8 +295,8 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://lirobot.com//blog/2012/12/22/install-octopress/';
-        var disqus_url = 'http://lirobot.com//blog/2012/12/22/install-octopress/';
+        var disqus_identifier = 'http://lirobot.github.com/blog/2012/12/22/install-octopress/';
+        var disqus_url = 'http://lirobot.github.com/blog/2012/12/22/install-octopress/';
         var disqus_script = 'embed.js';
       
     (function () {
